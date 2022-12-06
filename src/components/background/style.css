@@ -1,0 +1,70 @@
+@property --rotate {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 160deg;
+}
+
+.wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: auto;
+}
+
+.wrapper .title {
+  letter-spacing: 25px;
+  font-size: 68px;
+  font-weight: bold;
+  color: #d4d4d4;
+  text-align: center;
+  margin-bottom: 25px;;
+}
+
+.wrapper .image-wrapper {
+  text-align: center;
+}
+
+.wrapper .image-wrapper::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  height: 550px;
+  width: 550px;
+  border-radius: 500px;
+  filter: blur(20px);
+  background-image: linear-gradient(var(--rotate), skyblue, pink);
+  opacity: 1;
+  animation: spin 2s linear infinite;
+}
+
+.wrapper .image-wrapper .background-img {
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+.wrapper .image-wrapper .background-img {
+  width: 500px;
+  height: 500px;
+  margin: 25px;
+  border-radius: 500px;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
