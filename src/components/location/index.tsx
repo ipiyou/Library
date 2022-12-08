@@ -12,7 +12,6 @@ function Spliter(str: string, word: string) {
       string = "";
     } else string += str[i];
   }
-  console.log(arr);
   return string ? [...arr, string] : arr;
 }
 

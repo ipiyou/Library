@@ -5,8 +5,9 @@ import MainRoot from "./pages/MainRoot";
 function App() {
   return (
     <div>
+      <MainRoot />
       <Routes>
-        <Route path="/" element={<MainRoot />} />
+        <Route path="/" element={<></>} />
       </Routes>
     </div>
   );
