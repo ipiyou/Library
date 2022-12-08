@@ -35,7 +35,7 @@ function RootLocation() {
         );
       });
   }, [pathname]);
-
+  
   return (
     <div className="white-box">
       <PathElement childs={PathChild} />
