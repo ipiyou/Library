@@ -1,4 +1,4 @@
-import { useState, createElement } from "react";
+import { useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import PathElement from "./PathElement";
 import "./style.css";
@@ -12,29 +12,33 @@ function Spliter(str: string, word: string) {
       string = "";
     } else string += str[i];
   }
+  console.log(arr);
   return string ? [...arr, string] : arr;
 }
 
 function RootLocation() {
   const { pathname } = useLocation();
 
-  let strSave = "";
-  const childArray = Spliter(pathname, "/").map((ele, i, arr) => {
-    const isAttach = i !== arr.length - 1 && ele !== "/" ? "/" : "";
-    console.log(arr);
-    const isFirst = i === 0;
-    const PathString = ele + isAttach;
-    const PATH = (strSave += isFirst ? "/" : PathString);
-    return (
-      <span className="topath-click">
-        <Link to={PATH}>{PathString}</Link>
-      </span>
-    );
-  });
-  console.log(pathname.split("/"));
+  const PathChild = useMemo(() => {
+    let strSave = "";
+    return Spliter(pathname, "/")
+      .filter((e) => e)
+      .map((ele, i, arr) => {
+        const isAttach = i !== arr.length - 1 ? "/" : "";
+        const isFirst = i === 0;
+        const PathString = ele + isAttach;
+        const PATH = (strSave += isFirst ? "/" : PathString);
+        return (
+          <Link className="topath-click" to={PATH}>
+            {PathString}
+          </Link>
+        );
+      });
+  }, [pathname]);
+
   return (
     <div className="white-box">
-      <PathElement childs={childArray} />
+      <PathElement childs={PathChild} />
     </div>
   );
 }

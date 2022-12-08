@@ -1,15 +1,27 @@
 .white-box {
   position: absolute;
   width: 700px;
-  height: 200px;
+  height: 100px;
   left: 0;
   right: 0;
+  top: 92%;
   margin: 0 auto;
-  border-radius: 50px;
+  border-radius: 40px;
   background-color: white;
 }
 
-.root-location{
-    text-align: center;
-    font-size: 24px;
+.root-location {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.root-location .topath-click {
+  border-radius: 5px;
+  text-decoration: none;
+  letter-spacing: 7px;
+  color: #666666
+}
+
+.root-location .topath-click:hover {
+  background-color: #d4d4d4;
 }
