@@ -4,4 +4,9 @@ body{
     background-color: #E1FFFB;
     overflow: hidden;
     font-family: 'noto-sans-cjk-kr', sans-serif;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
 }
