@@ -1,0 +1,21 @@
+.file-selector {
+  width: 100px;
+  padding-top: 10px;
+  margin: 25px 40px;
+  text-align: center;
+  display: inline-block;
+}
+
+.file-selector:hover{
+    background-color: #eeeeee;
+}
+
+.file-selector .file-img {
+  height: 64px;
+}
+
+.file-selector .file-text {
+  font-size: 18px;
+  text-align: center;
+  word-wrap: break-word;
+}
