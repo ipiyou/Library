@@ -12,7 +12,7 @@ function FilesWrapper({ fileList }: PropsType) {
   const { pathname } = useLocation();
 
   return (
-    <div className="wrapper">
+    <div>
       {pathname !== "/" && (
         <DBClickFile path={-1} fileText="뒤로가기" imageSrc={BackSpace} />
       )}
