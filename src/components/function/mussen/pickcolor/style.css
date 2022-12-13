@@ -1,0 +1,21 @@
+.colorpicker-wrap {
+  text-align: center;
+}
+
+#colorpicker-canvas {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  border-radius: 500px;
+}
+
+.innerpicker {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
